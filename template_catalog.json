@@ -107,8 +107,16 @@
     "name": "shopify-polaris-runner",
     "language": "typescript",
     "frameworks": [
+      "cloudflare",
+      "date-fns",
+      "hono",
+      "immer",
       "react",
-      "vite"
+      "typescript",
+      "vite",
+      "wrangler",
+      "zod",
+      "zustand"
     ],
     "description": {
       "selection": "# Template Selection\n\nShopify Polaris starter for building admin-like React apps using Shopify's Polaris component library. Use when:\n- You're building internal admin UIs or merchant-facing dashboards\n- You want accessible, opinionated UI components and design system\n\nAvoid when:\n- You need lightweight, custom-styled marketing pages\n\nBuilt with:\n\n- React + Vite\n- Shopify Polaris components (no Tailwind required)\n- Optional Cloudflare Worker integration for APIs",
