@@ -1,0 +1,6 @@
+name: "shopify-polaris-runner"
+description: "React + Vite starter pre-configured with Shopify Polaris components and a minimal Cloudflare Workers worker integration reference"
+base_reference: "vite-reference"
+
+package_patches:
+  name: "shopify-polaris-runner"

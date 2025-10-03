@@ -104,6 +104,18 @@
     }
   },
   {
+    "name": "shopify-polaris-runner",
+    "language": "typescript",
+    "frameworks": [
+      "react",
+      "vite"
+    ],
+    "description": {
+      "selection": "# Template Selection\n\nShopify Polaris starter for building admin-like React apps using Shopify's Polaris component library. Use when:\n- You're building internal admin UIs or merchant-facing dashboards\n- You want accessible, opinionated UI components and design system\n\nAvoid when:\n- You need lightweight, custom-styled marketing pages\n\nBuilt with:\n\n- React + Vite\n- Shopify Polaris components (no Tailwind required)\n- Optional Cloudflare Worker integration for APIs",
+      "usage": "# Usage\n\nThis template provides a minimal React + Vite app preconfigured to use Shopify Polaris components.\n\nDevelopment:\n\n- Install dependencies: `npm install`\n- Start dev server: `npm run dev`\n\nBuild:\n\n- Build the app: `npm run build`\n- Preview production build: `npm run preview`\n\nNotes:\n\n- Polaris requires its CSS and provider setup (see `src/main.tsx` and `src/index.css`). No Tailwind configuration is necessary.\n- If you plan to deploy a Worker-backed API, add your Worker code under `worker/` following other templates' patterns."
+    }
+  },
+  {
     "name": "vite-cf-DO-runner",
     "language": "typescript",
     "frameworks": [
