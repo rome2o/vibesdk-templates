@@ -4,29 +4,27 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { logger } from 'hono/logger';
 import { userRoutes } from './userRoutes';
-import { Env, GlobalDurableObject } from './core-utils';
+import { Env } from './core-utils';
 
-// Need to export GlobalDurableObject to make it available in wrangler
-export { GlobalDurableObject };
 export interface ClientErrorReport {
-    message: string;
-    url: string;
-    userAgent: string;
-    timestamp: string;
-    stack?: string;
-    componentStack?: string;
-    errorBoundary?: boolean;
-    errorBoundaryProps?: Record<string, unknown>;
-    source?: string;
-    lineno?: number;
-    colno?: number;
-    error?: unknown;
-  }
+  message: string;
+  url: string;
+  userAgent: string;
+  timestamp: string;
+  stack?: string;
+  componentStack?: string;
+  errorBoundary?: boolean;
+  errorBoundaryProps?: Record<string, unknown>;
+  source?: string;
+  lineno?: number;
+  colno?: number;
+  error?: unknown;
+}
+
 const app = new Hono<{ Bindings: Env }>();
 
 app.use('*', logger());
 
-// **DO NOT TOUCH THE CODE BELOW THIS LINE**
 app.use('/api/*', cors({ origin: '*', allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], allowHeaders: ['Content-Type', 'Authorization'] }));
 
 userRoutes(app);
