@@ -1,7 +1,11 @@
-import { DurableObject } from "cloudflare:workers";
+/**
+ * Core utilities for the Cloudflare Durable Object template
+ * STRICTLY DO NOT MODIFY THIS FILE - Hidden from AI to prevent breaking core functionality
+ */
+import { GlobalDurableObject } from './durableObject';
 
-export interface Env {
-  GlobalDurableObject: DurableObjectNamespace;
+export { GlobalDurableObject };
+
+export type Env = {
+    GlobalDurableObject: DurableObjectNamespace<GlobalDurableObject>;
 }
-
-export { GlobalDurableObject } from './durableObject';
